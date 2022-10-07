@@ -3,6 +3,7 @@ import React from "react";
 
 export default function Form (props) {
     const {values,
+            onCheckboxChange
             } = props;
 
     return (
@@ -29,8 +30,36 @@ export default function Form (props) {
                     <input 
                         name='pepperoni'
                         type='checkbox'
-                        
+                        onChange={onCheckboxChange}
+                        checked={values}
                     />
+                </label>
+                <label>
+                    Sausage
+                    <input
+                    name='sausage'
+                    type='checkbox'
+                    onChange={onCheckboxChange}
+                    checked={values}
+                    />
+                </label>
+                <label>
+                    Onion
+                    <input 
+                        name='onion'
+                        type='checkbox'
+                        onChange={onCheckboxChange}
+                        checked={values}
+                    />
+                </label>
+                <label>
+                    Mushrooms
+                        <input 
+                        name='mushroom'
+                        type='checkbox'
+                        onChange={onCheckboxChange}
+                        checked={values}
+                        />
                 </label>
             </form>
         </div>
