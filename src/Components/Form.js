@@ -3,7 +3,10 @@ import React from "react";
 
 export default function Form (props) {
     const {values,
-            onCheckboxChange
+            onInputChange,
+            onCheckboxChange,
+            onSubmit,
+            errors
             } = props;
 
     return (
@@ -61,6 +64,23 @@ export default function Form (props) {
                         checked={values}
                         />
                 </label>
+                <h4>Special Insturctions</h4>
+                <input id='special-text' 
+                    name='insturctions'
+                    type='text'
+                    value={values}
+                    onChange={onInputChange}
+                />
+                <div className='order-btn'>
+                    <button id='order-button'>Add Pizza</button>
+                </div>
+                <div className='err'>
+                    <div>{errors}</div>
+                </div>
+
+
+
+
             </form>
         </div>
     );
