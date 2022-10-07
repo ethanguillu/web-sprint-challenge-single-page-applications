@@ -2,7 +2,8 @@ import React from "react";
 
 
 export default function Form (props) {
-
+    const {values,
+            } = props;
 
     return (
         <div>
@@ -13,11 +14,23 @@ export default function Form (props) {
                 id='name-input'
                 name='text'
                 />
-
-                <label>Size
-                    <select>
-                        
+                <h4>Pizza Size</h4>
+                <label>
+                    <select id='size-dropdown'>
+                        <option value=''>--- Select Pizza Size ---</option>
+                        <option value='small'>8-inch (Small)</option>
+                        <option value='medium'>12-inch (Medium)</option>
+                        <option value='large'> 16-inch (Large)</option>
                     </select>
+                </label>
+                <h4>Your Choice of Toppings</h4>
+                <label>
+                    Pepperoni
+                    <input 
+                        name='pepperoni'
+                        type='checkbox'
+                        
+                    />
                 </label>
             </form>
         </div>
